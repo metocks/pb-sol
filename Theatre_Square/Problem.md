@@ -1,5 +1,5 @@
 
-###A. Theatre Square
+####A. Theatre Square
 
 time limit per test: 1 second
 memory limit per test: 256 megabytes
@@ -20,12 +20,12 @@ Write the needed number of flagstones.
 
 ###Example
 
-#input
-===============================
+input
+-------------------------------
 6 6 4
 
-#output
-===============================
+output
+-------------------------------
 4
 
 
