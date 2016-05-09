@@ -89,8 +89,78 @@ def _12_fuse():
 
 def _13_paintblock():
     x, y, z = map(int, raw_input().split())
-    
+
+    print 4 * max(0, z - 2) + 2 * (2 * max(0, x - 2) + 2 * max(0, y - 2))
+
+
+def _14_r2():
+    r1, m = map(int, raw_input().split())
+
+    # m = (r1 + r2) / 2
+    # 2m - r1 = r2
+
+    r2 = 2 * m - r1
+    print r2
+
+
+def _15_coci_faktor():
+    """<http://59.23.113.171/30stair/coci_faktor/coci_faktor.php?pname=coci_faktor>"""
+
+    # faktor = up(refers / papers)
+    # z = y / x, then x = y / z
+    # refers = faktor * papers ?
+
+    papers, faktor = map(int, raw_input().split())
+
+    print papers * (faktor - 1) + 1
+
+
+def _16_coci_slatkisi():
+    price, unit = map(int, raw_input().split())
+
+    # xq ~= round(price)
+    q = 10 ** unit
+
+    print (price + q / 2) / q * q
+
+
+def _17_butter():
+    # time = n for each 1mouse & 1butter
+    # m mouse & m butter require n time!
+    n, m = map(int, raw_input().split())
+    print n
+
+
+def _18_slant():
+    x1, y1 = map(int, raw_input().split())
+    x2, y2 = map(int, raw_input().split())
+
+    d = (y2 - y1) / (x2 - x1)
+    diff = y1 - x1 * d
+    print d, diff
+
+
+def _19_maxandmin():
+    x, y = map(int, raw_input().split())
+    print max(min(x, y), x)
+
+
+def _20_angle():
+    n = int(raw_input())
+
+    sum_inside_angle = (n - 2) * 180  # sum of onside angle = triangle * (n-2).  ex) rect = 2 * triangle
+    sum_outside_angle = 360  # Always! sum of outside angle is 360!
+
+    print sum_inside_angle, sum_outside_angle
+
+
+def _21_spot():
+    d = float(raw_input())
+    p = float(raw_input())
+
+    percent = (100 + p) / 100
+    print "%.03f" % (d - d * percent)
 
 
 if __name__ == '__main__':
-    _13_paintblock()
+    _21_spot()
